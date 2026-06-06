@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="markTitle markDesc">
+  <title id="markTitle">香橼果养老院图标标志</title>
+  <desc id="markDesc">香橼果、叶片、家屋和南阳宛字区位点组合成的图标。</desc>
+  <defs>
+    <linearGradient id="markCitron" x1="68" y1="64" x2="184" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f4cf62"/>
+      <stop offset="0.62" stop-color="#e7ad30"/>
+      <stop offset="1" stop-color="#c98918"/>
+    </linearGradient>
+    <linearGradient id="markLeaf" x1="124" y1="26" x2="214" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6d8f4c"/>
+      <stop offset="1" stop-color="#2f593d"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="236" height="236" rx="48" fill="#fffaf0"/>
+  <path d="M128 18c-61 0-108 45-108 106 0 76 108 124 108 124s108-48 108-124c0-61-47-106-108-106Z" fill="#2f593d"/>
+  <circle cx="128" cy="116" r="78" fill="#fffaf0"/>
+  <circle cx="128" cy="118" r="65" fill="url(#markCitron)"/>
+  <path d="M125 48c25-42 62-57 110-44-10 49-45 70-110 44Z" fill="url(#markLeaf)"/>
+  <path d="M146 47c19-13 42-23 69-29" fill="none" stroke="#e8f2d7" stroke-width="8" stroke-linecap="round"/>
+  <path d="M76 126 128 86l52 40" fill="none" stroke="#273126" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M92 124v49h72v-49" fill="none" stroke="#273126" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M102 170c17 16 34 23 52 23s35-7 52-23" fill="none" stroke="#fff7d8" stroke-width="13" stroke-linecap="round"/>
+  <circle cx="128" cy="215" r="23" fill="#315d75"/>
+  <text x="128" y="225" text-anchor="middle" fill="#fffaf0" font-family="Noto Sans SC, Microsoft YaHei, PingFang SC, sans-serif" font-size="28" font-weight="850">宛</text>
+</svg>

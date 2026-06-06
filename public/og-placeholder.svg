@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="香橼果养老院筹建期宣传图">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fffaf0"/>
+      <stop offset="55%" stop-color="#fff1bd"/>
+      <stop offset="100%" stop-color="#e6f1f3"/>
+    </linearGradient>
+    <linearGradient id="ogCitron" x1="652" y1="136" x2="872" y2="356" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f4cf62"/>
+      <stop offset="0.62" stop-color="#e7ad30"/>
+      <stop offset="1" stop-color="#c98918"/>
+    </linearGradient>
+    <linearGradient id="ogLeaf" x1="730" y1="68" x2="910" y2="176" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6d8f4c"/>
+      <stop offset="1" stop-color="#2f593d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <path d="M0 468c195-78 382-82 560-12 211 83 414 48 640-62v236H0Z" fill="#f6efe2"/>
+  <rect x="84" y="104" width="602" height="328" rx="16" fill="#fffdf6" stroke="#d8d4c6" stroke-width="4"/>
+  <text x="132" y="210" fill="#273126" font-family="Noto Sans SC, Microsoft YaHei, PingFang SC, sans-serif" font-size="72" font-weight="850">香橼果养老院</text>
+  <rect x="136" y="246" width="196" height="48" rx="24" fill="#e6f1f3" stroke="#315d75" stroke-opacity="0.28"/>
+  <path d="M166 257c-10 0-17 7-17 17 0 12 17 24 17 24s17-12 17-24c0-10-7-17-17-17Z" fill="#315d75"/>
+  <circle cx="166" cy="274" r="6" fill="#fffaf0"/>
+  <text x="196" y="280" fill="#315d75" font-family="Noto Sans SC, Microsoft YaHei, PingFang SC, sans-serif" font-size="28" font-weight="850">河南 · 南阳</text>
+  <text x="136" y="342" fill="#2f593d" font-family="Noto Sans SC, Microsoft YaHei, PingFang SC, sans-serif" font-size="38" font-weight="760">宛美养老 · 医养康养生活共同体</text>
+  <text x="136" y="394" fill="#596457" font-family="Noto Sans SC, Microsoft YaHei, PingFang SC, sans-serif" font-size="28">项目筹建中 · 开放合作与意向咨询</text>
+  <path d="M760 58c-92 0-160 66-160 156 0 116 160 196 160 196s160-80 160-196c0-90-68-156-160-156Z" fill="#2f593d"/>
+  <circle cx="760" cy="206" r="118" fill="#fffaf0"/>
+  <circle cx="760" cy="210" r="96" fill="url(#ogCitron)"/>
+  <path d="M752 82c42-72 105-98 188-76-18 82-78 118-188 76Z" fill="url(#ogLeaf)"/>
+  <path d="M784 82c31-22 70-38 116-48" fill="none" stroke="#e8f2d7" stroke-width="12" stroke-linecap="round"/>
+  <path d="M684 224 760 166l76 58" fill="none" stroke="#273126" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M708 222v72h104v-72" fill="none" stroke="#273126" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M724 290c24 22 48 33 72 33s48-11 72-33" fill="none" stroke="#fff7d8" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="760" cy="392" r="34" fill="#315d75"/>
+  <text x="760" y="405" text-anchor="middle" fill="#fffaf0" font-family="Noto Sans SC, Microsoft YaHei, PingFang SC, sans-serif" font-size="40" font-weight="850">宛</text>
+</svg>

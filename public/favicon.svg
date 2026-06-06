@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="香橼果养老院图标">
+  <rect width="64" height="64" rx="14" fill="#fffaf0"/>
+  <path d="M32 5C17 5 7 16 7 31c0 18 25 28 25 28s25-10 25-28C57 16 47 5 32 5Z" fill="#2f593d"/>
+  <circle cx="32" cy="30" r="19" fill="#fffaf0"/>
+  <circle cx="32" cy="31" r="15" fill="#e7ad30"/>
+  <path d="M31 13c6-10 15-13 27-10-3 12-11 17-27 10Z" fill="#517b45"/>
+  <path d="M20 33 32 24l12 9" fill="none" stroke="#273126" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 32v11h16V32" fill="none" stroke="#273126" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="55" r="5" fill="#315d75"/>
+</svg>

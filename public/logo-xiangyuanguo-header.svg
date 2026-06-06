@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 128" role="img" aria-labelledby="headerLogoTitle headerLogoDesc">
+  <title id="headerLogoTitle">香橼果养老院导航标志</title>
+  <desc id="headerLogoDesc">导航栏使用的紧凑版标志，显示香橼果养老院和河南南阳。</desc>
+  <defs>
+    <linearGradient id="headerCitron" x1="32" y1="30" x2="106" y2="104" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f4cf62"/>
+      <stop offset="0.62" stop-color="#e7ad30"/>
+      <stop offset="1" stop-color="#c98918"/>
+    </linearGradient>
+    <linearGradient id="headerLeaf" x1="58" y1="16" x2="120" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6d8f4c"/>
+      <stop offset="1" stop-color="#2f593d"/>
+    </linearGradient>
+  </defs>
+  <path d="M64 8C31 8 8 32 8 65c0 42 56 59 56 59s56-17 56-59C120 32 97 8 64 8Z" fill="#2f593d"/>
+  <circle cx="64" cy="62" r="42" fill="#fffaf0"/>
+  <circle cx="64" cy="64" r="34" fill="url(#headerCitron)"/>
+  <path d="M62 26c14-23 34-31 61-24-6 27-25 39-61 24Z" fill="url(#headerLeaf)"/>
+  <path d="M73 25c11-7 23-13 39-16" fill="none" stroke="#e8f2d7" stroke-width="5" stroke-linecap="round"/>
+  <path d="M38 68 64 48l26 20" fill="none" stroke="#273126" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M46 67v25h36V67" fill="none" stroke="#273126" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M51 90c8 8 17 12 26 12s18-4 26-12" fill="none" stroke="#fff7d8" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="64" cy="111" r="11" fill="#315d75"/>
+  <text x="64" y="116" text-anchor="middle" fill="#fffaf0" font-family="Noto Sans SC, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="850">宛</text>
+  <text x="144" y="56" fill="#273126" font-family="Noto Sans SC, Microsoft YaHei, PingFang SC, sans-serif" font-size="42" font-weight="850" letter-spacing="1">香橼果养老院</text>
+  <g transform="translate(146 74)" font-family="Noto Sans SC, Microsoft YaHei, PingFang SC, sans-serif">
+    <rect x="0" y="0" width="156" height="36" rx="18" fill="#e6f1f3" stroke="#315d75" stroke-opacity="0.28"/>
+    <path d="M22 8c-7 0-12 5-12 12 0 8 12 17 12 17s12-9 12-17c0-7-5-12-12-12Z" fill="#315d75"/>
+    <circle cx="22" cy="20" r="4" fill="#fffaf0"/>
+    <text x="44" y="25" fill="#315d75" font-size="22" font-weight="850">河南 · 南阳</text>
+  </g>
+  <text x="320" y="100" fill="#2f593d" font-family="Noto Sans SC, Microsoft YaHei, PingFang SC, sans-serif" font-size="21" font-weight="760">宛美养老</text>
+</svg>
