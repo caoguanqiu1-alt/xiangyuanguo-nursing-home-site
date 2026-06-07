@@ -88,7 +88,7 @@ export const siteConfig = {
   },
   planningPrinciples: [
     "以筹建规划为公开口径",
-    "不公开未确认床位数与收费",
+    "暂时不公开未确认床位数与收费",
     "最终院址确认后再开放导航",
   ],
   advantages: [
