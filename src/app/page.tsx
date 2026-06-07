@@ -1,203 +1,9 @@
-import { FormEvent, useEffect, useState } from "react";
-import { IconKey, siteConfig } from "./config/site";
+import { ContactSection } from "../components/ContactSection";
+import { Header } from "../components/Header";
+import { Icon } from "../components/Icon";
+import { siteConfig } from "../config/site";
 
-const setMeta = (selector: string, content: string) => {
-  const tag = document.head.querySelector<HTMLMetaElement>(selector);
-  if (tag) tag.content = content;
-};
-
-const useDocumentMeta = () => {
-  useEffect(() => {
-    document.title = siteConfig.seo.title;
-    setMeta('meta[name="description"]', siteConfig.seo.description);
-    setMeta('meta[property="og:title"]', siteConfig.seo.title);
-    setMeta('meta[property="og:description"]', siteConfig.seo.description);
-    setMeta('meta[property="og:site_name"]', siteConfig.name);
-    setMeta('meta[property="og:image"]', siteConfig.seo.ogImage);
-  }, []);
-};
-
-const displayValue = (value: string) => value.trim() || "待正式公布";
-
-function Icon({ name }: { name: IconKey }) {
-  const common = {
-    width: 28,
-    height: 28,
-    viewBox: "0 0 28 28",
-    fill: "none",
-    xmlns: "http://www.w3.org/2000/svg",
-    "aria-hidden": true,
-  };
-
-  switch (name) {
-    case "care":
-      return (
-        <svg {...common}>
-          <path d="M14 23s-8-4.4-8-11a4.7 4.7 0 0 1 8-3.4A4.7 4.7 0 0 1 22 12c0 6.6-8 11-8 11Z" />
-          <path d="M11 14h6M14 11v6" />
-        </svg>
-      );
-    case "layers":
-      return (
-        <svg {...common}>
-          <path d="m14 4 9 5-9 5-9-5 9-5Z" />
-          <path d="m5 14 9 5 9-5M5 19l9 5 9-5" />
-        </svg>
-      );
-    case "bowl":
-      return (
-        <svg {...common}>
-          <path d="M6 13h16c0 5-3.3 9-8 9s-8-4-8-9Z" />
-          <path d="M9 9c0-2 2-2 2-4M14 9c0-2 2-2 2-4M19 9c0-2 2-2 2-4" />
-        </svg>
-      );
-    case "shield":
-      return (
-        <svg {...common}>
-          <path d="M14 3 22 6v6c0 5.2-3.4 9-8 11-4.6-2-8-5.8-8-11V6l8-3Z" />
-          <path d="m10 14 2.5 2.5L18 11" />
-        </svg>
-      );
-    case "signal":
-      return (
-        <svg {...common}>
-          <path d="M6 19a11 11 0 0 1 16 0M10 15a6 6 0 0 1 8 0M14 20h.01" />
-          <path d="M6 8h16v14H6z" />
-        </svg>
-      );
-    case "people":
-      return (
-        <svg {...common}>
-          <path d="M10 13a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM18 13a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" />
-          <path d="M3 23c.8-4.2 3.2-6.5 7-6.5s6.2 2.3 7 6.5M15 17c3.9.2 6.3 2.2 7 6" />
-        </svg>
-      );
-    case "home":
-      return (
-        <svg {...common}>
-          <path d="m4 13 10-8 10 8" />
-          <path d="M7 12v11h14V12M11 23v-7h6v7" />
-        </svg>
-      );
-    case "mind":
-      return (
-        <svg {...common}>
-          <path d="M12 4a7 7 0 0 0-7 7c0 3.9 2.8 6.4 6 7v5h7v-4.6c2.7-1 5-3.5 5-7.1A7.2 7.2 0 0 0 15.8 4H12Z" />
-          <path d="M11 10h6M10 14h8" />
-        </svg>
-      );
-    case "recovery":
-      return (
-        <svg {...common}>
-          <path d="M14 6v7l4 3" />
-          <path d="M22 8a10 10 0 1 1-3.7-3.1" />
-          <path d="M22 3v5h-5" />
-        </svg>
-      );
-    case "community":
-      return (
-        <svg {...common}>
-          <path d="M4 22V9l6-4 6 4v13" />
-          <path d="M16 22V12l4-3 4 3v10M9 22v-6h3v6" />
-        </svg>
-      );
-    case "hospital":
-      return (
-        <svg {...common}>
-          <path d="M6 23V5h16v18" />
-          <path d="M10 10h8M14 6v8M10 23v-5h8v5" />
-        </svg>
-      );
-    case "route":
-      return (
-        <svg {...common}>
-          <path d="M7 6h.01M21 22h.01" />
-          <path d="M7 6c6 0 6 5 0 5s-6 5 0 5h14c-6 0-6 6 0 6" />
-        </svg>
-      );
-    case "market":
-      return (
-        <svg {...common}>
-          <path d="M5 11h18l-2 12H7L5 11Z" />
-          <path d="M9 11a5 5 0 0 1 10 0M10 16h8" />
-        </svg>
-      );
-    case "leaf":
-      return (
-        <svg {...common}>
-          <path d="M23 5c-9-.7-16 3.7-16 10.5 0 3.6 2.6 6.5 6.2 6.5C19.5 22 23.5 14.8 23 5Z" />
-          <path d="M7 23c3-7 8-10 14-12" />
-        </svg>
-      );
-    case "call":
-      return (
-        <svg {...common}>
-          <path d="M9 5h10v18H9z" />
-          <path d="M12 19h4M14 9v5M11.5 11.5h5" />
-        </svg>
-      );
-    case "record":
-      return (
-        <svg {...common}>
-          <path d="M8 4h12v20H8z" />
-          <path d="M11 9h6M11 14h6M11 19h4" />
-        </svg>
-      );
-    case "family":
-      return (
-        <svg {...common}>
-          <path d="M4 15 14 7l10 8" />
-          <path d="M7 14v9h14v-9M11 23v-5h6v5" />
-          <path d="M10 11a2 2 0 0 0 4 0 2 2 0 0 0 4 0" />
-        </svg>
-      );
-    case "trace":
-      return (
-        <svg {...common}>
-          <path d="M7 5h11l3 3v15H7z" />
-          <path d="M18 5v4h4M10 13h8M10 17h6M10 21h4" />
-        </svg>
-      );
-    default:
-      return null;
-  }
-}
-
-function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  return (
-    <header className="site-header">
-      <a className="skip-link" href="#main">
-        跳到主要内容
-      </a>
-      <nav className="nav-shell" aria-label="主导航">
-        <a className="brand-mark" href="#home" onClick={() => setMenuOpen(false)}>
-          <img className="brand-logo" src="/logo-xiangyuanguo-header.svg" alt={`${siteConfig.name}，河南南阳`} />
-        </a>
-        <button
-          className="menu-button"
-          type="button"
-          aria-expanded={menuOpen}
-          aria-controls="site-menu"
-          onClick={() => setMenuOpen((open) => !open)}
-        >
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-          <span className="sr-only">切换导航菜单</span>
-        </button>
-        <div className={menuOpen ? "nav-links open" : "nav-links"} id="site-menu">
-          {siteConfig.navItems.map((item) => (
-            <a key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>
-              {item.label}
-            </a>
-          ))}
-        </div>
-      </nav>
-    </header>
-  );
-}
+const consultationTypes = ["入住咨询", "合作洽谈", "项目关注", "其他"];
 
 function SectionHeading({
   eyebrow,
@@ -214,6 +20,25 @@ function SectionHeading({
       <h2>{title}</h2>
       {description ? <p>{description}</p> : null}
     </div>
+  );
+}
+
+function HiddenNetlifyForm() {
+  return (
+    <form name={siteConfig.contact.formName} data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value={siteConfig.contact.formName} />
+      <input name="name" />
+      <input name="phone" />
+      <select name="type">
+        {consultationTypes.map((type) => (
+          <option key={type} value={type}>
+            {type}
+          </option>
+        ))}
+      </select>
+      <textarea name="message" />
+      <input type="checkbox" name="privacy" />
+    </form>
   );
 }
 
@@ -262,7 +87,9 @@ function Hero() {
     <section className="hero-section" id="home" aria-labelledby="hero-title">
       <div className="hero-content">
         <div className="hero-copy">
-          <span className="status-pill">{siteConfig.projectStatus}</span>
+          <span className="status-pill" data-project-status>
+            {siteConfig.projectStatus}
+          </span>
           <h1 id="hero-title">{siteConfig.name}</h1>
           <p className="hero-subtitle">{siteConfig.subtitle}</p>
           <p className="hero-statement">{siteConfig.heroStatement}</p>
@@ -435,7 +262,7 @@ function SmartCare() {
       <div className="container">
         <SectionHeading
           eyebrow="智慧养老"
-          title="规划配置透明、可追踪的照护支持"
+          title="规划配置透明、可追溯的照护支持"
           description="智慧系统为拟建设方向，具体供应商、功能上线范围和开放时间以正式筹建进展为准。"
         />
         <div className="card-grid smart-grid">
@@ -479,126 +306,6 @@ function LifestyleSection() {
   );
 }
 
-const encodeForm = (data: FormData) =>
-  Array.from(data.entries())
-    .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(String(value))}`)
-    .join("&");
-
-const isLocalFormPreview = () => ["localhost", "127.0.0.1"].includes(window.location.hostname);
-
-function ContactSection() {
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
-
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-    formData.set("form-name", siteConfig.contact.formName);
-    setStatus("submitting");
-
-    try {
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encodeForm(formData),
-      });
-
-      if (!response.ok && !isLocalFormPreview()) {
-        throw new Error(`Netlify form response ${response.status}`);
-      }
-      form.reset();
-      setStatus("success");
-    } catch {
-      if (isLocalFormPreview()) {
-        form.reset();
-        setStatus("success");
-      } else {
-        setStatus("error");
-      }
-    }
-  };
-
-  return (
-    <section className="section contact-section" id="contact" aria-labelledby="contact-title">
-      <div className="container contact-layout">
-        <div>
-          <SectionHeading
-            eyebrow="联系咨询"
-            title={siteConfig.contact.title}
-            description={siteConfig.contact.description}
-          />
-          <div className="contact-list" aria-label="联系方式">
-            <p>
-              <span>电话</span>
-              <strong>{displayValue(siteConfig.phone)}</strong>
-            </p>
-            <p>
-              <span>微信</span>
-              <strong>{displayValue(siteConfig.wechat)}</strong>
-            </p>
-            <p>
-              <span>邮箱</span>
-              <strong>{displayValue(siteConfig.email)}</strong>
-            </p>
-            <p>
-              <span>咨询时间</span>
-              <strong>{displayValue(siteConfig.consultationHours)}</strong>
-            </p>
-          </div>
-        </div>
-        <form
-          className="consult-form"
-          name={siteConfig.contact.formName}
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
-        >
-          <input type="hidden" name="form-name" value={siteConfig.contact.formName} />
-          <p className="hidden-field">
-            <label>
-              请勿填写
-              <input name="bot-field" tabIndex={-1} autoComplete="off" />
-            </label>
-          </p>
-          <label>
-            姓名
-            <input name="name" type="text" autoComplete="name" required placeholder="请输入姓名" />
-          </label>
-          <label>
-            联系电话
-            <input name="phone" type="tel" autoComplete="tel" required placeholder="请输入联系电话" />
-          </label>
-          <label>
-            咨询类型
-            <select name="type" required defaultValue="入住咨询">
-              <option value="入住咨询">入住咨询</option>
-              <option value="合作洽谈">合作洽谈</option>
-              <option value="项目关注">项目关注</option>
-              <option value="其他">其他</option>
-            </select>
-          </label>
-          <label>
-            留言
-            <textarea name="message" rows={5} placeholder="可简单说明关注事项或家庭需求" />
-          </label>
-          <label className="checkbox-row">
-            <input name="privacy" type="checkbox" value="confirmed" required />
-            <span>{siteConfig.contact.privacyText}</span>
-          </label>
-          <button className="button primary form-button" type="submit" disabled={status === "submitting"}>
-            {status === "submitting" ? "提交中..." : "提交咨询"}
-          </button>
-          <div className="form-status" aria-live="polite">
-            {status === "success" ? <p className="success">{siteConfig.contact.successMessage}</p> : null}
-            {status === "error" ? <p className="error">{siteConfig.contact.errorMessage}</p> : null}
-          </div>
-        </form>
-      </div>
-    </section>
-  );
-}
-
 function Footer() {
   return (
     <footer className="site-footer">
@@ -610,11 +317,10 @@ function Footer() {
   );
 }
 
-export default function App() {
-  useDocumentMeta();
-
+export default function Page() {
   return (
     <>
+      <HiddenNetlifyForm />
       <Header />
       <main id="main">
         <Hero />

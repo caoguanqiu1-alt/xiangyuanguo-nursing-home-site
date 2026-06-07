@@ -1,6 +1,6 @@
 # 香橼果养老院筹建宣传站 v0.1
 
-面向河南省南阳市“香橼果养老院”的筹建期单页宣传网站。项目使用 Vite、React、TypeScript 和原生 CSS 构建，第一版采用单页锚点导航，不使用后端数据库。
+面向河南省南阳市“香橼果养老院”的筹建期单页宣传网站。项目使用 Next.js App Router、React、TypeScript、原生 CSS 和 Tailwind CSS 构建，第一版采用单页锚点导航，不使用后端数据库。
 
 ## 本地运行
 
@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-默认开发服务器会由 Vite 输出本地地址。局域网访问已通过 `--host 0.0.0.0` 开启。
+默认开发服务器运行在 `http://localhost:5173/`。局域网访问已通过 `--hostname 0.0.0.0` 开启。
 
 ## 构建与检查
 
@@ -18,7 +18,7 @@ npm run lint
 npm run build
 ```
 
-构建产物输出到 `dist/`。
+构建产物输出到 `out/`。
 
 ## 修改站点配置
 
@@ -42,14 +42,14 @@ npm run build
 npm run build
 ```
 
-确认 `dist/` 已生成后，使用项目本地 Netlify CLI 预览部署：
+确认 `out/` 已生成后，使用项目本地 Netlify CLI 预览部署：
 
 ```bash
-npx netlify deploy --dir=dist
+npx netlify deploy --dir=out
 ```
 
 本项目已将 `netlify-cli` 作为开发依赖安装，不需要全局安装。不要直接执行生产部署。正式发布命令需在预览确认后再运行：
 
 ```bash
-npx netlify deploy --prod --dir=dist
+npx netlify deploy --prod --dir=out
 ```

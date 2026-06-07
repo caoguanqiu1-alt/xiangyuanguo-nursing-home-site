@@ -57,6 +57,7 @@ export const siteConfig = {
   email: "",
   consultationHours: "",
   seo: {
+    siteUrl: "https://xiangyuanguo-care-home.netlify.app",
     title: "香橼果养老院 | 宛美养老 · 医养康养生活共同体",
     description:
       "香橼果养老院筹建期宣传站，面向南阳市中心城区展示医养协同、分层照护、食养生活、适老空间、智慧养老和意向咨询规划。",
